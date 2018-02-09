@@ -18,6 +18,7 @@ http://localhost:8080/
 
 - [Xampp PHP 7.2.1](https://www.apachefriends.org/pt_br/download.html)
 - [Composer](https://getcomposer.org/download/)
+
 Na pasta raiz, execute o Composer para instalar todas as demais depedências
 ```
 composer install
