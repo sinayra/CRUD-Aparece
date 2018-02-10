@@ -2,7 +2,7 @@
 //Autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-//config
+/////// Configuração ///////
 $config = [
     'settings' => [
         'displayErrorDetails' => true,
@@ -43,18 +43,62 @@ $container['db'] = function ($c) {
 
 $container['view'] = new \Slim\Views\PhpRenderer('templates/');
 
-$Pessoa = new \controllers\Pessoa($container['db']);
+$pessoa = new \controllers\Pessoa($container['db']);
 
 
 /////// Rotas ///////
 
-$app->get('/',function ($request, $response, $args) use ($Pessoa, $container){ //index.php
-        $this->logger->addInfo('Página inicial');
-        $result = $Pessoa->teste();
-
-        $container['view']->render($response, 'default.php', ['result' => $result]);
+$app->get('/',function ($request, $response, $args) use ($pessoa, $container){ //index.php
+        $this->logger->addInfo('index');
+        $container['view']->render($response, 'default.php');
 });
 
+$app->get('/inicial',function ($request, $response, $args) use ($pessoa, $container){ //Página Inicial
+        $this->logger->addInfo('Página inicial');
+        $result = $pessoa->teste();
+
+        $container['view']->render($response, 'inicial.php', ['result' => $result]);
+});
+
+$app->get('/cadastrar',function ($request, $response, $args) use ($pessoa, $container){ //Cadastrar Usuários
+        $this->logger->addInfo('Cadastrar');
+        $result = $pessoa->teste();
+
+        $container['view']->render($response, 'cadastrar.php', ['result' => $result]);
+});
+
+$app->get('/listar',function ($request, $response, $args) use ($pessoa, $container){ //Listar Usuários
+        $this->logger->addInfo('Listar');
+        $result = $pessoa->teste();
+
+        $container['view']->render($response, 'listar.php', ['result' => $result]);
+});
+
+$app->get('/editar',function ($request, $response, $args) use ($pessoa, $container){ //Editar Usuários
+        $this->logger->addInfo('Editar');
+        $result = $pessoa->teste();
+
+
+        $container['view']->render($response, 'editar.php', ['result' => $result]);
+});
+
+$app->get('/deletar',function ($request, $response, $args) use ($pessoa, $container){ //Deletar Usuários
+        $this->logger->addInfo('Deletar');
+        $result = $pessoa->teste();
+
+
+        $container['view']->render($response, 'deletar.php', ['result' => $result]);
+});
+
+$app->get('/relatorios',function ($request, $response, $args) use ($pessoa, $container){ //Deletar Usuários
+        $this->logger->addInfo('Relatórios');
+        $result = $pessoa->teste();
+
+
+        $container['view']->render($response, 'relatorios.php', ['result' => $result]);
+});
+
+/*
 //Listando todas
 $app->get('/pessoas/', function() use ($app){
     (new \controllers\Pessoa($app))->lista();
@@ -79,6 +123,6 @@ $app->put('/pessoas/:id', function($id) use ($app){
 $app->delete('/pessoas/:id', function($id) use ($app){
     (new \controllers\Pessoa($app))->excluir($id);
 });
-
+*/
 //Rodando aplicação
 $app->run();
