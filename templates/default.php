@@ -15,21 +15,22 @@ header('Content-Type: application/json; charset=utf-8');
     <title>Processo Seletivo 2018 Aparece Brasil</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="templates/css/dashboard.css" rel="stylesheet">
-    <link href="templates/css/datepicker/bootstrap-datepicker3.standalone.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
   </head>
 
   <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Processo Seletivo 2018 Aparece Brasil</a>
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Processo Seletivo 2018 <br /> Aparece Brasil</a>
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+
     </nav>
 
     <div class="container-fluid">
       <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar" style="top:40px">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
@@ -46,6 +47,12 @@ header('Content-Type: application/json; charset=utf-8');
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
+                  <span data-feather="users"></span>
+                  Listar Usuários
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
                   <span data-feather="user-check"></span>
                   Editar Usuários
                 </a>
@@ -54,12 +61,6 @@ header('Content-Type: application/json; charset=utf-8');
                 <a class="nav-link" href="#">
                   <span data-feather="user-minus"></span>
                   Deletar Usuários
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="users"></span>
-                  Listar Usuários
                 </a>
               </li>
               <li class="nav-item">
@@ -122,8 +123,6 @@ header('Content-Type: application/json; charset=utf-8');
     <script src="../vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="templates/js/Chart.min.js"></script>
     <script src="templates/js/rendererFunctions.js"></script>
-    <script src="templates/js/datepicker/bootstrap-datepicker.js"></script>
-    <script src="templates/js/jquery.autocomplete-address.min.js"></script>
 
     <!-- Icons -->
     <script src="templates/js/feather.min.js"></script>
@@ -138,10 +137,12 @@ header('Content-Type: application/json; charset=utf-8');
 		});
 
     	$('a.nav-link').click(function(e){  //Navegação
-    		var txt = $(this).text().replace(/\s/g,'');
+    		var antigo = $('.nav-link .active');
+    		var txt;
     		
     		$('.sr-only').remove();
-    		$('.active').removeClass('active');
+    		antigo.removeClass('active');
+    		txt = $(this).text().replace(/\s/g,'');
 
 			$(this).addClass('active');
 			$(this).append('<span class="sr-only">(atual)</span>');

@@ -1,78 +1,176 @@
-<?php
-//echo json_encode($data);
-?>
-
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
   <h1 class="h2">Cadastrar</h1>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group mr-2">
+      <button class="btn btn-sm btn-outline-secondary">Share</button>
+      <button class="btn btn-sm btn-outline-secondary">Export</button>
+    </div>
+    <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+      <span data-feather="calendar"></span>
+      This week
+    </button>
+  </div>
 </div>
 
-<form>
+<canvas class="my-4" id="myChart" width="900" height="380"></canvas>
 
-  <div class="form-group">
-    <label for="insert_nome">Nome</label>
-    <input type="text" class="form-control" name="insert_nome" placeholder="Nome completo">
-  </div>
+<h2>Section title</h2>
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1,001</td>
+        <td>Lorem</td>
+        <td>ipsum</td>
+        <td>dolor</td>
+        <td>sit</td>
+      </tr>
+      <tr>
+        <td>1,002</td>
+        <td>amet</td>
+        <td>consectetur</td>
+        <td>adipiscing</td>
+        <td>elit</td>
+      </tr>
+      <tr>
+        <td>1,003</td>
+        <td>Integer</td>
+        <td>nec</td>
+        <td>odio</td>
+        <td>Praesent</td>
+      </tr>
+      <tr>
+        <td>1,003</td>
+        <td>libero</td>
+        <td>Sed</td>
+        <td>cursus</td>
+        <td>ante</td>
+      </tr>
+      <tr>
+        <td>1,004</td>
+        <td>dapibus</td>
+        <td>diam</td>
+        <td>Sed</td>
+        <td>nisi</td>
+      </tr>
+      <tr>
+        <td>1,005</td>
+        <td>Nulla</td>
+        <td>quis</td>
+        <td>sem</td>
+        <td>at</td>
+      </tr>
+      <tr>
+        <td>1,006</td>
+        <td>nibh</td>
+        <td>elementum</td>
+        <td>imperdiet</td>
+        <td>Duis</td>
+      </tr>
+      <tr>
+        <td>1,007</td>
+        <td>sagittis</td>
+        <td>ipsum</td>
+        <td>Praesent</td>
+        <td>mauris</td>
+      </tr>
+      <tr>
+        <td>1,008</td>
+        <td>Fusce</td>
+        <td>nec</td>
+        <td>tellus</td>
+        <td>sed</td>
+      </tr>
+      <tr>
+        <td>1,009</td>
+        <td>augue</td>
+        <td>semper</td>
+        <td>porta</td>
+        <td>Mauris</td>
+      </tr>
+      <tr>
+        <td>1,010</td>
+        <td>massa</td>
+        <td>Vestibulum</td>
+        <td>lacinia</td>
+        <td>arcu</td>
+      </tr>
+      <tr>
+        <td>1,011</td>
+        <td>eget</td>
+        <td>nulla</td>
+        <td>Class</td>
+        <td>aptent</td>
+      </tr>
+      <tr>
+        <td>1,012</td>
+        <td>taciti</td>
+        <td>sociosqu</td>
+        <td>ad</td>
+        <td>litora</td>
+      </tr>
+      <tr>
+        <td>1,013</td>
+        <td>torquent</td>
+        <td>per</td>
+        <td>conubia</td>
+        <td>nostra</td>
+      </tr>
+      <tr>
+        <td>1,014</td>
+        <td>per</td>
+        <td>inceptos</td>
+        <td>himenaeos</td>
+        <td>Curabitur</td>
+      </tr>
+      <tr>
+        <td>1,015</td>
+        <td>sodales</td>
+        <td>ligula</td>
+        <td>in</td>
+        <td>libero</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-  <div class="form-group">
-    <label for="insert_sexo">Sexo</label>
-    <select class="form-control" name="insert_sexo" disabled>
-      <option selected>Brasil</option>
-    </select>
-  </div>
+<!-- Graphs -->
 
-  <div class="form-group">
-    <label for="insert_email">Email</label>
-    <input type="email" class="form-control" name="insert_email" placeholder="nome@exemplo.com">
-  </div>
-  <div class="form-group">
-    <label for="insert_nascimento">Data de nascimento</label>
-    <input class="datepicker form-control"  name="insert_nascimento" data-provide="datepicker">
-  </div>
-  <div class="form-group">
-    <label for="insert_cpf">CPF</label>
-    <input type="text" class="form-control" name="insert_cpf" placeholder="CPF">
-  </div>
-  <div class="form-group">
-    <label for="insert_pais">País</label>
-     <select class="form-control" name="insert_pais" disabled>
-      <option selected>Brasil</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="insert_cep">CEP</label>
-    <input type="text" class="form-control" name="insert_cep" placeholder="CEP">
-  </div>
-  <div class="form-group">
-    <label for="insert_estado">Estado</label>
-    <input name="insert_estado" class="form-control" disabled data-autocomplete-state/>
-  </div>
-  <div class="form-group">
-    <label for="insert_cidade">Cidade</label>
-    <input name="insert_cidade" class="form-control" disabled data-autocomplete-city/>
-  </div>
-  <div class="form-group">
-    <label for="insert_bairro">Bairro</label>
-    <input name="insert_bairro" class="form-control" disabled data-autocomplete-neighborhood/>
-  </div>
-  <div class="form-group">
-    <label for="insert_endereco">Endereço</label>
-    <input name="insert_endereco" class="form-control" disabled data-autocomplete-address/>
-  </div>
-  <div class="form-group">
-    <label for="insert_numero">Número</label>
-    <input type="number" class="form-control" name="insert_numero" placeholder="Nº">
-  </div>
-
-  <button type="submit" class="btn btn-primary">Cadastrar</button>
-</form>
-
-<script type="text/javascript">
-  $('.datepicker').datepicker();
-  var teste = $("input[name=insert_cep]").autocompleteAddress({
-      address: "input[name=insert_endereco]",
-      neighborhood: "input[name=insert_bairro]",
-      city: "input[name=insert_cidade]",
-      state: "input[name=insert_estado]"
-    });
-
+<script>
+  var ctx = document.getElementById("myChart");
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      datasets: [{
+        data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#007bff',
+        borderWidth: 4,
+        pointBackgroundColor: '#007bff'
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: false
+          }
+        }]
+      },
+      legend: {
+        display: false,
+      }
+    }
+  });
 </script>

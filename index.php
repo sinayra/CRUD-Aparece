@@ -14,10 +14,10 @@ $config = [
     ],
 ];
 
-$config['db']['host']   = "localhost";
-$config['db']['user']   = "root";
-$config['db']['pass']   = "";
-$config['db']['dbname'] = "aparece";
+$config['db']['host']   = 'localhost';
+$config['db']['user']   = 'aparece_usr';
+$config['db']['pass']   = '123456';
+$config['db']['dbname'] = 'aparece';
 
 //Instanciando objeto
 $app = new \Slim\App($config);
@@ -43,74 +43,59 @@ $container['db'] = function ($c) {
 
 $container['view'] = new \Slim\Views\PhpRenderer('templates/');
 
+$pessoa = new \controllers\Pessoa($container['db']);
+
 
 /////// Rotas ///////
 
-$app->get('/',function ($request, $response, $args){ //index.php
-    $this->logger->addInfo('index');
-    $this->view->render($response, 'default.php');
+$app->get('/',function ($request, $response, $args) use ($pessoa, $container){ //index.php
+        $this->logger->addInfo('index');
+        $container['view']->render($response, 'default.php');
 });
 
-$app->get('/inicial',function ($request, $response, $args){ //Página Inicial
+$app->get('/inicial',function ($request, $response, $args) use ($pessoa, $container){ //Página Inicial
         $this->logger->addInfo('Página inicial');
-        $pessoa = new \controllers\Pessoa($this->db);
         $result = $pessoa->teste();
 
-       $this->view->render($response, 'inicial.php', ['result' => $result]);
+        $container['view']->render($response, 'inicial.php', ['result' => $result]);
 });
 
-$app->get('/cadastrar',function ($request, $response, $args) { //Cadastrar Usuários
+$app->get('/cadastrar',function ($request, $response, $args) use ($pessoa, $container){ //Cadastrar Usuários
         $this->logger->addInfo('Cadastrar');
-        //$sexo = new \controllers\Sexo($this->db);
+        $result = $pessoa->teste();
 
-        $sth = $this->db->prepare("SELECT * FROM sexo");
-        $this->logger->addInfo("sth: " . $result);
-
-            $sth->execute();
-            $result = $sth->fetchAll(\PDO::FETCH_ASSOC);
-
-
-        $this->logger->addInfo($result);
-
-        $this->view->render($response, 'cadastrar.php', ['result' => $result]);
+        $container['view']->render($response, 'cadastrar.php', ['result' => $result]);
 });
 
-$app->get('/listar',function ($request, $response, $args) { //Listar Usuários
+$app->get('/listar',function ($request, $response, $args) use ($pessoa, $container){ //Listar Usuários
         $this->logger->addInfo('Listar');
-        $sth = $this->db->prepare("SELECT * FROM sexo");
-        $sth->execute();
-        $todos = $sth->fetchAll();
+        $result = $pessoa->teste();
 
-        $this->logger->addInfo($todos);
-
-        $this->view->render($response, 'listar.php', ['result' => $todos]);
+        $container['view']->render($response, 'listar.php', ['result' => $result]);
 });
 
-$app->get('/editar',function ($request, $response, $args) { //Editar Usuários
+$app->get('/editar',function ($request, $response, $args) use ($pessoa, $container){ //Editar Usuários
         $this->logger->addInfo('Editar');
-        $pessoa = new \controllers\Pessoa($this->db);
         $result = $pessoa->teste();
 
 
-        $this->view->render($response, 'editar.php', ['result' => $result]);
+        $container['view']->render($response, 'editar.php', ['result' => $result]);
 });
 
-$app->get('/deletar',function ($request, $response, $args){ //Deletar Usuários
+$app->get('/deletar',function ($request, $response, $args) use ($pessoa, $container){ //Deletar Usuários
         $this->logger->addInfo('Deletar');
-        $pessoa = new \controllers\Pessoa($this->db);
         $result = $pessoa->teste();
 
 
-        $this->view->render($response, 'deletar.php', ['result' => $result]);
+        $container['view']->render($response, 'deletar.php', ['result' => $result]);
 });
 
-$app->get('/relatorios',function ($request, $response, $args) { //Deletar Usuários
+$app->get('/relatorios',function ($request, $response, $args) use ($pessoa, $container){ //Deletar Usuários
         $this->logger->addInfo('Relatórios');
-        $pessoa = new \controllers\Pessoa($this->db);
         $result = $pessoa->teste();
 
 
-        $this->view->render($response, 'relatorios.php', ['result' => $result]);
+        $container['view']->render($response, 'relatorios.php', ['result' => $result]);
 });
 
 /*
