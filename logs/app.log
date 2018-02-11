@@ -1,0 +1,30 @@
+[2018-02-11 08:51:03] slim-app.INFO: '/insert' route [] {"uid":"dca4bce"}
+[2018-02-11 08:51:03] slim-app.INFO: Tipo:  [] {"uid":"dca4bce"}
+[2018-02-11 08:52:45] slim-app.INFO: '/insert' route [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO: Key: insert_nome Param: dsfdsf [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO: Key: insert_sexo Param: 1 [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO: Key: insert_email Param: fulano@example.com [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO: Key: insert_nascimento Param: 2018-02-07 [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO: Key: insert_cpf Param: 21321312ddd [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO: Key: insert_pais Param: Brasil [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO: Key: insert_cep Param: 70658197 [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO: Key: insert_estado Param: DF [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO: Key: insert_cidade Param: Brasília [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO: Key: insert_bairro Param: Cruzeiro Novo [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO: Key: insert_endereco Param: SHCES Quadra 1109 Bloco G [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO: Key: insert_numero Param: 2350 [] {"uid":"23e7bf6"}
+[2018-02-11 08:52:45] slim-app.INFO:  [] {"uid":"23e7bf6"}
+[2018-02-11 08:53:29] slim-app.INFO: '/insert' route [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: Key: insert_nome Param: dsfdsf [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: Key: insert_sexo Param: 1 [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: Key: insert_email Param: fulano@example.com [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: Key: insert_nascimento Param: 2018-02-07 [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: Key: insert_cpf Param: 21321312ddd [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: Key: insert_pais Param: Brasil [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: Key: insert_cep Param: 70658197 [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: Key: insert_estado Param: DF [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: Key: insert_cidade Param: Brasília [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: Key: insert_bairro Param: Cruzeiro Novo [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: Key: insert_endereco Param: SHCES Quadra 1109 Bloco G [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: Key: insert_numero Param: 2350 [] {"uid":"7b666c5"}
+[2018-02-11 08:53:29] slim-app.INFO: 2018-02-07 [] {"uid":"7b666c5"}

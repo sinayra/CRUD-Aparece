@@ -4,9 +4,11 @@ Sistema de cadastro, busca, remoção e atualização de usuários utilizando PH
 
 ## Para rodar localmente
 
+Certifique-se que o Apache e o MySQL estão rodando através do painel de controle do XAMPP.
+
 Coloque os códigos-fonte deste projeto em uma nova pasta dentro da pasta *path/to/xampp/htdocs* e, na pasta raiz do projeto, inicialize o servidor PHP com
 ```
-php -S localhost:8080
+composer start
 ```
 
 Acesse o sistema com o URL
@@ -37,3 +39,4 @@ composer install
 
 * [Slim v2](https://www.slimframework.com) - Micro-framework utilizado
 * [Bootstrap](https://getbootstrap.com/) - Tema utilizado
+* [Slim Skeleton](https://github.com/slimphp/Slim-Skeleton) - Setup

@@ -1,5 +1,6 @@
 <?php
-namespace controllers{
+
+
 	/*
 	Classe pessoa
 	*/
@@ -25,4 +26,4 @@ namespace controllers{
 		}
 		
 	}
-}
+?>

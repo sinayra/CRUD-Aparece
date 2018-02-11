@@ -15,11 +15,11 @@ header('Content-Type: application/json; charset=utf-8');
     <title>Processo Seletivo 2018 Aparece Brasil</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="templates/css/dashboard.css" rel="stylesheet">
-    <link href="templates/css/datepicker/bootstrap-datepicker3.standalone.css" rel="stylesheet">
+    <link href="./css/dashboard.css" rel="stylesheet">
+    <link href="./css/datepicker/bootstrap-datepicker3.standalone.css" rel="stylesheet">
   </head>
 
   <body>
@@ -116,17 +116,17 @@ header('Content-Type: application/json; charset=utf-8');
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="templates/js/jquery-3.3.1.min.js" ></script>
+    <script src="./js/jquery-3.3.1.min.js" ></script>
     <script>window.jQuery</script>
-    <script src="templates/js/popper.min.js"></script>
-    <script src="../vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="templates/js/Chart.min.js"></script>
-    <script src="templates/js/rendererFunctions.js"></script>
-    <script src="templates/js/datepicker/bootstrap-datepicker.js"></script>
-    <script src="templates/js/jquery.autocomplete-address.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/Chart.min.js"></script>
+    <script src="./js/rendererFunctions.js"></script>
+    <script src="./js/datepicker/bootstrap-datepicker.js"></script>
+    <script src="./js/jquery.autocomplete-address.min.js"></script>
 
     <!-- Icons -->
-    <script src="templates/js/feather.min.js"></script>
+    <script src="./js/feather.min.js"></script>
     <script>
       feather.replace()
     </script>
@@ -138,32 +138,33 @@ header('Content-Type: application/json; charset=utf-8');
 		});
 
     	$('a.nav-link').click(function(e){  //Navegação
-    		var txt = $(this).text().replace(/\s/g,'');
-    		
-    		$('.sr-only').remove();
-    		$('.active').removeClass('active');
+        var txt;
+        $('.sr-only').remove();
+        $('.active').removeClass('active');
 
-			$(this).addClass('active');
-			$(this).append('<span class="sr-only">(atual)</span>');
+    		txt = $(this).text().replace(/\s/g,'');
+        
+			  $(this).addClass('active');
+        $(this).append('<span class="sr-only">(atual)</span>');
 
-			switch(txt){
-				case "CadastrarUsuários":
-					loadMain('/cadastrar');
-					break;
-				case "ListarUsuários":
-					loadMain('/listar');
-					break;
-				case "EditarUsuários":
-					loadMain('/editar');
-					break;
-				case "DeletarUsuários":
-					loadMain('/deletar');
-					break;
-				case "Relatórios":
-					loadMain('/relatorios');
-					break;
-				default:
-					loadMain('/inicial');
+			  switch(txt){
+  				case "CadastrarUsuários":
+  					loadMain('/cadastrar');
+  					break;
+  				case "ListarUsuários":
+  					loadMain('/listar');
+  					break;
+  				case "EditarUsuários":
+  					loadMain('/editar');
+  					break;
+  				case "DeletarUsuários":
+  					loadMain('/deletar');
+  					break;
+  				case "Relatórios":
+  					loadMain('/relatorios');
+  					break;
+  				default:
+  					loadMain('/inicial');
 			}
 			
 			e.preventDefault();
