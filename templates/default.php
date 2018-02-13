@@ -110,6 +110,8 @@ header('Content-Type: application/json; charset=utf-8');
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 
         </main>
+
+        <div id="msg" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4"></div>
       </div>
     </div>
 
@@ -124,6 +126,7 @@ header('Content-Type: application/json; charset=utf-8');
     <script src="./js/rendererFunctions.js"></script>
     <script src="./js/datepicker/bootstrap-datepicker.js"></script>
     <script src="./js/jquery.autocomplete-address.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
 
     <!-- Icons -->
     <script src="./js/feather.min.js"></script>

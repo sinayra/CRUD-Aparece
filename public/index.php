@@ -28,6 +28,9 @@ require __DIR__ . '/../src/routes.php';
 
 // Register classes
 require __DIR__ . '/../classes/Sexo.php';
+require __DIR__ . '/../classes/Endereco.php';
+require __DIR__ . '/../classes/Pessoa.php';
+require __DIR__ . '/../classes/Relatorio.php';
 
 // Run app
 $app->run();
