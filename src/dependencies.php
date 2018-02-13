@@ -28,4 +28,9 @@ $container['db'] = function ($c) {
     return $pdo;
 };
 
+$container['email'] = function ($c) {
+    $e = $c->get('settings')['email'];
+    return $e;
+};
+
 ?>

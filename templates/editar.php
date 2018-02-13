@@ -1,12 +1,11 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
   <h2>Editar usuário cadastrado</h2>
 </div>
-<div id="msg_update"></div>
 
 <h4>Procurar por nome ou cpf</h4>
 <div id="search_update">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <form id="search_frm_update_nome">
         <label for="search_update_nome">Nome</label>
         <select name="nome">
@@ -21,7 +20,7 @@
         </select>
       </form>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <form id="search_frm_update_cpf">
         <label for="search_update_cpf">CPF</label>
         <select name="cpf">
@@ -36,7 +35,7 @@
         </select>
       </form>
     </div>
-</div> 
+  </div> 
 </div>
 
 <div id="searched_update">

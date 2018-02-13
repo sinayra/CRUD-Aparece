@@ -1,126 +1,29 @@
-[2018-02-13 06:00:36] slim-app.INFO: '/editar' route [] {"uid":"60a269e"}
-[2018-02-13 06:00:36] slim-app.INFO: '/deletar' route [] {"uid":"a9c56a2"}
-[2018-02-13 06:00:38] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"bd223d3"}
-[2018-02-13 06:01:51] slim-app.INFO: '/editar' route [] {"uid":"9cb8d14"}
-[2018-02-13 06:01:51] slim-app.INFO: '/deletar' route [] {"uid":"b5cd114"}
-[2018-02-13 06:01:52] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"c9adb62"}
-[2018-02-13 06:02:08] slim-app.INFO: '/editar' route [] {"uid":"9c158d5"}
-[2018-02-13 06:02:08] slim-app.INFO: '/deletar' route [] {"uid":"2533397"}
-[2018-02-13 06:02:09] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"5fbd5d7"}
-[2018-02-13 06:02:12] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"aad1895"}
-[2018-02-13 06:03:43] slim-app.INFO: '/listar' route [] {"uid":"da6def0"}
-[2018-02-13 06:03:43] slim-app.INFO: '/deletar' route [] {"uid":"445eba0"}
-[2018-02-13 06:03:45] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"d552b6c"}
-[2018-02-13 06:04:12] slim-app.INFO: '/listar' route [] {"uid":"01683e8"}
-[2018-02-13 06:04:13] slim-app.INFO: '/deletar' route [] {"uid":"f58766a"}
-[2018-02-13 06:04:15] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"0e82bd3"}
-[2018-02-13 06:04:30] slim-app.INFO: '/listar' route [] {"uid":"6c87364"}
-[2018-02-13 06:04:30] slim-app.INFO: '/deletar' route [] {"uid":"b0af58f"}
-[2018-02-13 06:04:32] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"b0d06c3"}
-[2018-02-13 06:04:34] slim-app.INFO: '/delete' route [] {"uid":"8102c98"}
-[2018-02-13 06:04:34] slim-app.INFO: id: 15 [] {"uid":"8102c98"}
-[2018-02-13 06:04:58] slim-app.INFO: '/delete' route [] {"uid":"175a9a7"}
-[2018-02-13 06:04:58] slim-app.INFO: id: 15 [] {"uid":"175a9a7"}
-[2018-02-13 06:04:58] slim-app.INFO: Deletou pessoa: ok [] {"uid":"175a9a7"}
-[2018-02-13 06:05:03] slim-app.INFO: '/listar' route [] {"uid":"8b4feb6"}
-[2018-02-13 06:05:05] slim-app.INFO: '/deletar' route [] {"uid":"7587463"}
-[2018-02-13 06:05:52] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"275642d"}
-[2018-02-13 06:05:55] slim-app.INFO: '/delete' route [] {"uid":"1d05bc2"}
-[2018-02-13 06:05:55] slim-app.INFO: id: 14 [] {"uid":"1d05bc2"}
-[2018-02-13 06:05:55] slim-app.INFO: Deletou pessoa: ok [] {"uid":"1d05bc2"}
-[2018-02-13 06:06:00] slim-app.INFO: '/delete' route [] {"uid":"23c338f"}
-[2018-02-13 06:06:00] slim-app.INFO: id: 14 [] {"uid":"23c338f"}
-[2018-02-13 06:06:00] slim-app.INFO: Deletou pessoa: ok [] {"uid":"23c338f"}
-[2018-02-13 06:06:08] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"c1da406"}
-[2018-02-13 06:06:10] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"47987a0"}
-[2018-02-13 06:07:10] slim-app.INFO: '/listar' route [] {"uid":"d23f5ce"}
-[2018-02-13 06:07:11] slim-app.INFO: '/deletar' route [] {"uid":"639c41c"}
-[2018-02-13 06:07:14] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"7ff4af2"}
-[2018-02-13 06:07:21] slim-app.INFO: '/delete' route [] {"uid":"7f27dbf"}
-[2018-02-13 06:07:21] slim-app.INFO: id: 8 [] {"uid":"7f27dbf"}
-[2018-02-13 06:07:21] slim-app.INFO: Deletou pessoa: ok [] {"uid":"7f27dbf"}
-[2018-02-13 06:09:27] slim-app.INFO: '/editar' route [] {"uid":"5145a94"}
-[2018-02-13 06:09:27] slim-app.INFO: '/deletar' route [] {"uid":"ec79440"}
-[2018-02-13 06:09:29] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"dd9945f"}
-[2018-02-13 06:09:33] slim-app.INFO: '/delete' route [] {"uid":"63fbb88"}
-[2018-02-13 06:09:33] slim-app.INFO: id: 9 [] {"uid":"63fbb88"}
-[2018-02-13 06:09:33] slim-app.INFO: Deletou pessoa: ok [] {"uid":"63fbb88"}
-[2018-02-13 06:09:34] slim-app.INFO: '/deletar' route [] {"uid":"27bc32c"}
-[2018-02-13 06:09:34] slim-app.INFO: '/deletar' route [] {"uid":"a6a8625"}
-[2018-02-13 06:11:39] slim-app.INFO: '/editar' route [] {"uid":"c51d9b2"}
-[2018-02-13 06:11:39] slim-app.INFO: '/deletar' route [] {"uid":"9321cd0"}
-[2018-02-13 06:11:42] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"8f5ffd9"}
-[2018-02-13 06:11:44] slim-app.INFO: '/delete' route [] {"uid":"4f9db8a"}
-[2018-02-13 06:11:44] slim-app.INFO: id: 5 [] {"uid":"4f9db8a"}
-[2018-02-13 06:11:44] slim-app.INFO: Deletou pessoa: ok [] {"uid":"4f9db8a"}
-[2018-02-13 06:11:48] slim-app.INFO: '/deletar' route [] {"uid":"f21cf70"}
-[2018-02-13 06:11:48] slim-app.INFO: '/deletar' route [] {"uid":"479d4d9"}
-[2018-02-13 06:15:01] slim-app.INFO: '/cadastrar' route [] {"uid":"6960783"}
-[2018-02-13 06:15:03] slim-app.INFO: '/listar' route [] {"uid":"42f0d1e"}
-[2018-02-13 06:15:13] slim-app.INFO: '/editar' route [] {"uid":"356b1ca"}
-[2018-02-13 06:15:14] slim-app.INFO: '/procuraPessoa' route [] {"uid":"f0b0f1d"}
-[2018-02-13 06:15:22] slim-app.INFO: '/insert' route [] {"uid":"82a0047"}
-[2018-02-13 06:15:22] slim-app.INFO: Monta obj endereço  [] {"uid":"82a0047"}
-[2018-02-13 06:15:22] slim-app.INFO: Atualizou endereço: ok [] {"uid":"82a0047"}
-[2018-02-13 06:15:22] slim-app.INFO: Monta obj pessoa  [] {"uid":"82a0047"}
-[2018-02-13 06:15:22] slim-app.INFO: Sexo:  1 [] {"uid":"82a0047"}
-[2018-02-13 06:15:22] slim-app.INFO: Atualizou pessoa: ok [] {"uid":"82a0047"}
-[2018-02-13 06:15:54] slim-app.INFO: Slim-Skeleton '/' route [] {"uid":"8e82810"}
-[2018-02-13 06:15:55] slim-app.INFO: '/inicial' route [] {"uid":"8e5b944"}
-[2018-02-13 06:15:56] slim-app.INFO: '/editar' route [] {"uid":"4479e2c"}
-[2018-02-13 06:15:57] slim-app.INFO: '/listar' route [] {"uid":"15d50b2"}
-[2018-02-13 06:16:04] slim-app.INFO: '/cadastrar' route [] {"uid":"60c454d"}
-[2018-02-13 06:16:59] slim-app.INFO: '/insert' route [] {"uid":"8bceb0c"}
-[2018-02-13 06:16:59] slim-app.INFO: Monta obj endereço  [] {"uid":"8bceb0c"}
-[2018-02-13 06:16:59] slim-app.INFO: Inseriu endereço: ok [] {"uid":"8bceb0c"}
-[2018-02-13 06:16:59] slim-app.INFO: Monta obj pessoa  [] {"uid":"8bceb0c"}
-[2018-02-13 06:16:59] slim-app.INFO: Inseriu pessoa: ok [] {"uid":"8bceb0c"}
-[2018-02-13 06:16:59] slim-app.INFO: '/enviar email' route [] {"uid":"f1307ef"}
-[2018-02-13 06:17:11] slim-app.INFO: '/editar' route [] {"uid":"7e819e1"}
-[2018-02-13 06:17:11] slim-app.INFO: '/cadastrar' route [] {"uid":"055cb5e"}
-[2018-02-13 06:17:45] slim-app.INFO: Slim-Skeleton '/' route [] {"uid":"2e5b32d"}
-[2018-02-13 06:17:46] slim-app.INFO: '/inicial' route [] {"uid":"b5b364c"}
-[2018-02-13 06:17:46] slim-app.INFO: '/cadastrar' route [] {"uid":"f71ec48"}
-[2018-02-13 06:18:46] slim-app.INFO: '/insert' route [] {"uid":"9f2792f"}
-[2018-02-13 06:18:46] slim-app.INFO: Monta obj endereço  [] {"uid":"9f2792f"}
-[2018-02-13 06:18:46] slim-app.INFO: Inseriu endereço: ok [] {"uid":"9f2792f"}
-[2018-02-13 06:18:46] slim-app.INFO: Monta obj pessoa  [] {"uid":"9f2792f"}
-[2018-02-13 06:18:46] slim-app.INFO: Inseriu pessoa: ok [] {"uid":"9f2792f"}
-[2018-02-13 06:18:46] slim-app.INFO: '/enviar email' route [] {"uid":"5b8f20f"}
-[2018-02-13 06:18:55] slim-app.INFO: '/editar' route [] {"uid":"9601f4f"}
-[2018-02-13 06:18:59] slim-app.INFO: '/procuraPessoa' route [] {"uid":"389993b"}
-[2018-02-13 06:19:03] slim-app.INFO: '/insert' route [] {"uid":"4016dd7"}
-[2018-02-13 06:19:03] slim-app.INFO: Monta obj endereço  [] {"uid":"4016dd7"}
-[2018-02-13 06:19:03] slim-app.INFO: Atualizou endereço: ok [] {"uid":"4016dd7"}
-[2018-02-13 06:19:03] slim-app.INFO: Monta obj pessoa  [] {"uid":"4016dd7"}
-[2018-02-13 06:19:03] slim-app.INFO: Sexo:  1 [] {"uid":"4016dd7"}
-[2018-02-13 06:19:03] slim-app.INFO: Atualizou pessoa: ok [] {"uid":"4016dd7"}
-[2018-02-13 06:19:07] slim-app.INFO: '/listar' route [] {"uid":"c75cdef"}
-[2018-02-13 06:19:23] slim-app.INFO: '/deletar' route [] {"uid":"5511a5f"}
-[2018-02-13 06:19:26] slim-app.INFO: '/editar' route [] {"uid":"aa1a95b"}
-[2018-02-13 06:19:28] slim-app.INFO: '/procuraPessoa' route [] {"uid":"19caa89"}
-[2018-02-13 06:19:33] slim-app.INFO: '/insert' route [] {"uid":"6b92bf7"}
-[2018-02-13 06:19:33] slim-app.INFO: Monta obj endereço  [] {"uid":"6b92bf7"}
-[2018-02-13 06:19:33] slim-app.INFO: Atualizou endereço: ok [] {"uid":"6b92bf7"}
-[2018-02-13 06:19:33] slim-app.INFO: Monta obj pessoa  [] {"uid":"6b92bf7"}
-[2018-02-13 06:19:33] slim-app.INFO: Sexo:  1 [] {"uid":"6b92bf7"}
-[2018-02-13 06:19:33] slim-app.INFO: Atualizou pessoa: ok [] {"uid":"6b92bf7"}
-[2018-02-13 06:19:36] slim-app.INFO: '/listar' route [] {"uid":"a150291"}
-[2018-02-13 06:19:46] slim-app.INFO: '/deletar' route [] {"uid":"b7ff1d2"}
-[2018-02-13 06:19:47] slim-app.INFO: '/listar' route [] {"uid":"84e733d"}
-[2018-02-13 06:19:51] slim-app.INFO: '/deletar' route [] {"uid":"5ef8bd8"}
-[2018-02-13 06:19:53] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"c1de46f"}
-[2018-02-13 06:19:56] slim-app.INFO: '/delete' route [] {"uid":"a60ebcf"}
-[2018-02-13 06:19:56] slim-app.INFO: id: 3 [] {"uid":"a60ebcf"}
-[2018-02-13 06:19:56] slim-app.INFO: Deletou pessoa: ok [] {"uid":"a60ebcf"}
-[2018-02-13 06:19:56] slim-app.INFO: '/deletar' route [] {"uid":"769629a"}
-[2018-02-13 06:19:57] slim-app.INFO: '/deletar' route [] {"uid":"5d9e90c"}
-[2018-02-13 06:20:10] slim-app.INFO: '/listar' route [] {"uid":"bd77e0c"}
-[2018-02-13 06:20:15] slim-app.INFO: '/deletar' route [] {"uid":"10032b8"}
-[2018-02-13 06:20:17] slim-app.INFO: '/procuraPessoaDelete' route [] {"uid":"8767aad"}
-[2018-02-13 06:20:20] slim-app.INFO: '/delete' route [] {"uid":"20bc93c"}
-[2018-02-13 06:20:20] slim-app.INFO: id: 4 [] {"uid":"20bc93c"}
-[2018-02-13 06:20:20] slim-app.INFO: Deletou pessoa: ok [] {"uid":"20bc93c"}
-[2018-02-13 06:20:20] slim-app.INFO: '/deletar' route [] {"uid":"5242997"}
-[2018-02-13 06:20:20] slim-app.INFO: '/deletar' route [] {"uid":"74d38b0"}
-[2018-02-13 06:34:43] slim-app.INFO: '/listar' route [] {"uid":"9bfedf4"}
+[2018-02-13 19:03:25] slim-app.INFO: '/editar' route [] {"uid":"a3d80c0"}
+[2018-02-13 19:03:26] slim-app.INFO: '/deletar' route [] {"uid":"d6562e2"}
+[2018-02-13 19:03:26] slim-app.INFO: '/listar' route [] {"uid":"75c47e5"}
+[2018-02-13 19:03:28] slim-app.INFO: '/relatorios' route [] {"uid":"cf32664"}
+[2018-02-13 19:03:28] slim-app.INFO: '/relatorio sexo' route [] {"uid":"3c0f1e5"}
+[2018-02-13 19:03:28] slim-app.INFO: cidade:  [] {"uid":"3c0f1e5"}
+[2018-02-13 19:03:28] slim-app.INFO: Contou sexo [] {"uid":"3c0f1e5"}
+[2018-02-13 19:03:28] slim-app.INFO: '/relatorio inativo' route [] {"uid":"19daacb"}
+[2018-02-13 19:03:28] slim-app.INFO: cidade:  [] {"uid":"19daacb"}
+[2018-02-13 19:03:28] slim-app.INFO: Contou inativo [] {"uid":"19daacb"}
+[2018-02-13 19:03:32] slim-app.INFO: '/relatorios' route [] {"uid":"ffee58e"}
+[2018-02-13 19:03:32] slim-app.INFO: '/relatorio sexo' route [] {"uid":"baceb08"}
+[2018-02-13 19:03:32] slim-app.INFO: cidade:  [] {"uid":"baceb08"}
+[2018-02-13 19:03:32] slim-app.INFO: Contou sexo [] {"uid":"baceb08"}
+[2018-02-13 19:03:32] slim-app.INFO: '/relatorio inativo' route [] {"uid":"d5d77ec"}
+[2018-02-13 19:03:32] slim-app.INFO: cidade:  [] {"uid":"d5d77ec"}
+[2018-02-13 19:03:32] slim-app.INFO: Contou inativo [] {"uid":"d5d77ec"}
+[2018-02-13 19:04:06] slim-app.INFO: '/inicial' route [] {"uid":"f208f16"}
+[2018-02-13 19:04:16] slim-app.INFO: '/cadastrar' route [] {"uid":"3ca8c75"}
+[2018-02-13 19:04:17] slim-app.INFO: '/editar' route [] {"uid":"664ab5f"}
+[2018-02-13 19:04:17] slim-app.INFO: '/deletar' route [] {"uid":"ac707e0"}
+[2018-02-13 19:04:18] slim-app.INFO: '/listar' route [] {"uid":"25b3113"}
+[2018-02-13 19:04:19] slim-app.INFO: '/relatorios' route [] {"uid":"9447123"}
+[2018-02-13 19:04:19] slim-app.INFO: '/relatorio sexo' route [] {"uid":"2a0873c"}
+[2018-02-13 19:04:19] slim-app.INFO: cidade:  [] {"uid":"2a0873c"}
+[2018-02-13 19:04:19] slim-app.INFO: Contou sexo [] {"uid":"2a0873c"}
+[2018-02-13 19:04:19] slim-app.INFO: '/relatorio inativo' route [] {"uid":"ccea614"}
+[2018-02-13 19:04:19] slim-app.INFO: cidade:  [] {"uid":"ccea614"}
+[2018-02-13 19:04:19] slim-app.INFO: Contou inativo [] {"uid":"ccea614"}

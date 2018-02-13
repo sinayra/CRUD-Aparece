@@ -3,6 +3,9 @@
 use Slim\Http\Request;
 use Slim\Http\Response;
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 // Routes
 
 $app->get('/', function (Request $request, Response $response, array $args) {
@@ -71,61 +74,53 @@ $app->post('/insert',function ($request, $response, $args) { //Cadastrar Usuári
        
 });
 
-///////////////// ARRUMAR EMAIL /////////////////
 $app->post('/enviaEmailCadastro',function ($request, $response, $args) { //Enviar email para usuários recém-cadastrados
 	$this->logger->info("'/enviar email' route");
 
 	$emailUser = $request->getParsedBody();
 
-    $mail = new PHPMailer;
+	if(empty($this->email['Username']) && empty($this->email['Password'])){
+		$this->logger->info('Configurações de email não configuradas. Mensagem não enviada.');
+	}
+	else{
+		try{
+		    //Create a new PHPMailer instance
+			$mail = new PHPMailer();
 
-    try {
+			$mail->CharSet = 'UTF-8';
 
-    //Tell PHPMailer to use SMTP
-	$mail->isSMTP();
-	//Enable SMTP debugging
-	// 0 = off (for production use)
-	// 1 = client messages
-	// 2 = client and server messages
-	$mail->SMTPDebug = 2;
-	//Set the hostname of the mail server
-	$mail->Host = 'smtp.gmail.com';
-	// use
-	// $mail->Host = gethostbyname('smtp.gmail.com');
-	// if your network does not support SMTP over IPv6
-	//Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
-	$mail->Port = 587;
-	//Set the encryption system to use - ssl (deprecated) or tls
-	$mail->SMTPSecure = 'tls';
-	//Whether to use SMTP authentication
-	$mail->SMTPAuth = true;
-	//Username to use for SMTP authentication - use full email address for gmail
-	$mail->Username = "sinayra.moreira@gmail.com";
-	//Password to use for SMTP authentication
-	$mail->Password = "Inu-Yasha1";
-	//Set who the message is to be sent from
-	$mail->setFrom('from@example.com', 'First Last');
-	//Set an alternative reply-to address
-	$mail->addReplyTo('replyto@example.com', 'First Last');
-	//Set who the message is to be sent to
-	$mail->addAddress('whoto@example.com', 'John Doe');
+			$mail->isSMTP();
+			$mail->Host = $this->email['Host'];
+			$mail->Port = $this->email['Port'];
+			$mail->SMTPSecure = $this->email['SMTPSecure'];
+			$mail->SMTPAuth = $this->email['SMTPAuth'];
+			$mail->Username = $this->email['Username'];
+			$mail->Password = $this->email['Password'];
+			$mail->setFrom($this->email['setFrom'][0], $this->email['setFrom'][1]);
+			$mail->addReplyTo($this->email['addReplyTo'][0], $this->email['addReplyTo'][0]);
 
-    $mail->isHTML(true);
+			$this->logger->info("configurou sender");
 
-    $mail->Subject = 'Sistema CRUD Aparece 2018';
-    $mail->Body    = "
-        <p>Olá, " . $emailUser['nome'] . "</p>,
-        <p>            
-        Parabéns, seu cadastro foi realizado com sucesso.
-        </p>
-       ";
+			$mail->addAddress($emailUser['email'], $emailUser['nome']);
 
-    $mail->send();
-    $this->logger->info('Mensagem enviada');
-    } 
-    catch (Exception $e) { 
-        $this->logger->info('Mailer Error: ' . $mail->errorMessage());
-    }
+			$this->logger->info("configurou receiver");
+
+		    $mail->isHTML(true);
+		    $mail->Subject = 'Sistema CRUD Aparece 2018';
+		    $mail->Body    = "
+		        <p>Olá, " . $emailUser['nome'] . ".</p>
+		        <p>            
+		        Parabéns, seu cadastro foi realizado com sucesso.
+		        </p>
+		       ";
+
+		    $mail->send();
+		    $this->logger->info('Mensagem enviada');
+		} 
+		catch (Exception $e) { 
+		        $this->logger->info('Mailer Error: ' . $mail->errorMessage());
+		}
+	}
 
        
 });
@@ -272,6 +267,52 @@ $app->delete('/delete/{id}',function ($request, $response, $args) { //Cadastrar 
 
     return json_encode($result);
        
+});
+
+$app->get('/relatorios/sexo/[{cidade}]',function ($request, $response, $args) { //Cadastrar Usuários
+	$this->logger->info("'/relatorio sexo' route");
+
+	$relatorio = new Relatorio($this->db);
+
+	$cidade = (( empty($args['cidade']) || $args['cidade'] == "-1")  ? null : $args['cidade']);
+
+	$this->logger->info("cidade: " . $cidade);
+	
+	//relatorio sexo
+	$result = $relatorio->countSexo($cidade);
+
+	$this->logger->info("Contou sexo");
+
+	return $this->renderer->render($response, 'relatorios_sexo.php', ['countSexo' => $result]);
+       
+});
+
+$app->get('/relatorios/inativo/[{cidade}]',function ($request, $response, $args) { //Cadastrar Usuários
+	$this->logger->info("'/relatorio inativo' route");
+
+	$relatorio = new Relatorio($this->db);
+
+	$cidade = (( empty($args['cidade']) || $args['cidade'] == "-1")  ? null : $args['cidade']);
+
+	$this->logger->info("cidade: " . $cidade);
+	
+	//relatorio inativo
+	$result = $relatorio->countInativo($cidade);
+
+	$this->logger->info("Contou inativo");
+
+	return $this->renderer->render($response, 'relatorios_inativo.php', ['countInativo' => $result]);
+       
+});
+
+$app->get('/relatorios',function ($request, $response, $args){ //Exibir opções de usuários para serem editados
+	$this->logger->info("'/relatorios' route");
+
+	$endereco = new Endereco($this->db);
+
+	$result = $endereco->listaCidade();
+
+	return $this->renderer->render($response, 'relatorios.php', ['cidades' => $result]);
 });
 
 ?>

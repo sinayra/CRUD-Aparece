@@ -27,6 +27,15 @@
 			return $result;
 		}
 
+		public function listaCidade(){
+			$stmt = $this->PDO->prepare("SELECT DISTINCT cidade FROM endereco");
+
+			$stmt->execute();
+			$result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+			
+			return $result;
+		}
+
 		public function insert(){
 
 			$sql = "INSERT INTO endereco (cep, logradouro, bairro, cidade, estado) " . 

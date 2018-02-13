@@ -42,7 +42,7 @@
 
 		public function countSexo($cidade = null){
 			$where = "";
-			if($cidade){
+			if($cidade && !empty($cidade)){
 				$where = "LEFT JOIN endereco AS e " .
                 	"ON p.id_endereco = e.id " .
                 	"WHERE e.cidade = '" . $cidade . "'";
@@ -50,7 +50,7 @@
 
 			$sql = "SELECT " . 
 				"	COUNT(p.id_sexo) AS 'qtd', " . 
-				"	s.tipo " . 
+				"	s.tipo AS 'tipo' " . 
 				"FROM pessoa AS p " . 
 				"LEFT JOIN sexo AS s " . 
 				"ON p.id_sexo = s.id " .
@@ -72,23 +72,24 @@
 
 		public function countInativo($cidade = null){
 			$where = "";
-			if($cidade){
+
+			if($cidade && !empty($cidade)){
 				$where = "LEFT JOIN endereco AS e " .
                 	"ON p.id_endereco = e.id " .
                 	"WHERE e.cidade = '" . $cidade . "'";
+
 			}
 			$sql = "SELECT " .
 				"SUM(CASE WHEN p.ativo = 1 THEN 1 ELSE 0 END) AS 'qtd_ativos', " .
 				"SUM(CASE WHEN p.ativo <> 1 THEN 1 ELSE 0 END) AS 'qtd_inativos' " .
 				"FROM pessoa AS p " . $where;
 
-
 			try {
 				$stmt = $this->PDO->prepare($sql);
 				$stmt->execute();
 
 			
-				$result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+				$result = $stmt->fetch();
 				return $result;
 			}
 			catch(PDOException $e) {

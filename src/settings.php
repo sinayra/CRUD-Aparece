@@ -22,7 +22,19 @@ return [
             'user' => 'root',
             'pass' => '',
             'dbname' => 'aparece'
-        ]
+        ],
+
+        // Email settings
+        'email' => [
+            'Port' => 587,
+            'Host' => 'smtp.gmail.com',
+            'SMTPSecure' => 'tls',
+            'SMTPAuth' => true,
+            'Username' => '',
+            'Password' => '',
+            'setFrom' => ['admin@aparecefake.com.br', 'Fake Admin'],
+            'addReplyTo' => ['replyto@aparecefake.com.br', 'Fake Admin Reply']
+        ],
     ],
 ];
 
